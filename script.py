@@ -17,8 +17,8 @@ df = pd.DataFrame({"Status":[True, False, False, False, False, False, False, Fal
 df.to_csv('saved.csv', index= False)
 
 subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
-subprocess.run(f"git commit -m 'www'", shell=True, stdout=subprocess.PIPE, text=True)
-subprocess.run(f"git push origin main", shell=True, stdout=subprocess.PIPE, text=True)
+subprocess.run("git commit -m sme ", shell=True, stdout=subprocess.PIPE, text=True)
+subprocess.run("git push origin main", shell=True, stdout=subprocess.PIPE, text=True)
 
 ind_loc = 0
 total_len = len(df)
@@ -29,16 +29,16 @@ for i in range(1,total_len):
     time.sleep(120)
 
     print(i)
-    print(df)
     print("-"* 100)
     df['Status'].iloc[i] = True
     df['Status'].iloc[i-1] = False
+    print(df)
 
     df.to_csv('saved.csv', index= False)
 
     time.sleep(5)
 
     subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
-    subprocess.run(f"git commit -m '{datetime.now()}'", shell=True, stdout=subprocess.PIPE, text=True)
-    subprocess.run(f"git push origin -u main", shell=True, stdout=subprocess.PIPE, text=True)
+    subprocess.run("git commit -m some", shell=True, stdout=subprocess.PIPE, text=True)
+    subprocess.run("git push origin -u main", shell=True, stdout=subprocess.PIPE, text=True)
 
