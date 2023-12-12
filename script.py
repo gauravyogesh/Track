@@ -15,7 +15,7 @@ import os
         # Commit the changes with the generated commit message
 # subprocess.run(f"git commit -m 'w'", shell=True, stdout=subprocess.PIPE, text=True)
 os.system("git add .")
-os.system("git commit -m 'w'")
+os.system("git commit -m 'w1'")
 
 # Print the output
 # print(result.stdout)
