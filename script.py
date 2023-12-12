@@ -21,9 +21,11 @@ subprocess.run(f"git commit -m 'www'", shell=True, stdout=subprocess.PIPE, text=
 subprocess.run(f"git push origin main", shell=True, stdout=subprocess.PIPE, text=True)
 
 ind_loc = 0
-total_len = max(df.index)
+total_len = len(df)
+
 
 for i in range(1,total_len):
+    print(i)
 
     time.sleep(30)
 
@@ -32,6 +34,9 @@ for i in range(1,total_len):
 
     df.to_csv('saved.csv', index= False)
 
+    time.sleep(30)
+
     subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
     subprocess.run(f"git commit -m 'www'", shell=True, stdout=subprocess.PIPE, text=True)
     subprocess.run(f"git push origin main", shell=True, stdout=subprocess.PIPE, text=True)
+
