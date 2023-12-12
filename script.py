@@ -17,6 +17,19 @@ df = pd.DataFrame({"Status":[True, False, False, False, False, False, False, Fal
 df.to_csv('saved.csv', index= False)
 
 subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
-
 subprocess.run(f"git commit -m 'www'", shell=True, stdout=subprocess.PIPE, text=True)
 subprocess.run(f"git push origin main", shell=True, stdout=subprocess.PIPE, text=True)
+
+ind_loc = 0
+total_len = max(df.index)
+
+for i in range(1,total_len):
+
+    time.sleep(10)
+
+    df['Status'].iloc[i] = True
+    df['Status'].iloc[i-1] = False
+
+    subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
+    subprocess.run(f"git commit -m 'www'", shell=True, stdout=subprocess.PIPE, text=True)
+    subprocess.run(f"git push origin main", shell=True, stdout=subprocess.PIPE, text=True)
