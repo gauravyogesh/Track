@@ -13,7 +13,7 @@ subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
         # commit_message = f'Automated commit - {datetime.now()}'
         
         # Commit the changes with the generated commit message
-subprocess.run(f"git commit -m 'w", shell=True, stdout=subprocess.PIPE, text=True)
+subprocess.run(f"git commit -m 'w'", shell=True, stdout=subprocess.PIPE, text=True)
 # Print the output
 # print(result.stdout)
 
