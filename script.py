@@ -8,12 +8,15 @@ import os
 
 # Example 1: Run a simple command
 # Use 'dir' instead of 'ls' on Windows
-subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
+# subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
 
         # commit_message = f'Automated commit - {datetime.now()}'
         
         # Commit the changes with the generated commit message
-subprocess.run(f"git commit -m 'w'", shell=True, stdout=subprocess.PIPE, text=True)
+# subprocess.run(f"git commit -m 'w'", shell=True, stdout=subprocess.PIPE, text=True)
+os.system("git add .")
+os.system("git commit -m 'w'")
+
 # Print the output
 # print(result.stdout)
 
