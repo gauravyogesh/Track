@@ -25,12 +25,12 @@ total_len = len(df)
 
 
 for i in range(1,total_len):
-    print(i)
-    print(df)
-    print("-"* 100)
 
     time.sleep(120)
 
+    print(i)
+    print(df)
+    print("-"* 100)
     df['Status'].iloc[i] = True
     df['Status'].iloc[i-1] = False
 
@@ -40,5 +40,5 @@ for i in range(1,total_len):
 
     subprocess.run("git add .", shell=True, stdout=subprocess.PIPE, text=True)
     subprocess.run(f"git commit -m '{datetime.now()}'", shell=True, stdout=subprocess.PIPE, text=True)
-    subprocess.run(f"git push origin main", shell=True, stdout=subprocess.PIPE, text=True)
+    subprocess.run(f"git push origin -u main", shell=True, stdout=subprocess.PIPE, text=True)
 
