@@ -10,7 +10,7 @@ import time
 start_time = time.perf_counter()
 
 # Set the delay in seconds
-delay = 60
+delay = 90
 
 
 df = pd.DataFrame({"Status":[True, False, False, False, False, False]}) 
